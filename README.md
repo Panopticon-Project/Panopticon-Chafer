@@ -1,35 +1,25 @@
 ![alt tag](https://user-images.githubusercontent.com/24201238/29351849-9c3087b4-82b8-11e7-8fed-350e3b8b4945.png)
 
 ## Name - Chafer
-Common name of the threat actor. Use one of the listed labels.
-* Label - Advanced Persistent Threat (APT) / Corporation / Nation State
+* Label - Advanced Persistent Threat (APT) 
 
 ## Aliases
-Other names the threat actor is known by.
-Use list
 * [Alias](URL to source)
 * [Alias](URL to source)
 
-## Overview - end of header
-A high-level summary of the threat actor.
-Use list
-* Description goes here
-*
+## Overview 
+* Chafer is believed to be an Iranian APT and appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance. Targeting occurs within Iran and elsewhere in the Middle East.
 
-## Time context starts
-
-## Campaign or Date Range - start of repeatable time contextual section 
-Use either a campaign with a specific timeframe or a date range not associated with a specific campaign. About is a short description of the campaign and should be removed if using date range. Dates should be in the format of DD Month Year e.g. 01 January 2019.
-* Campaign / Date Range
-* About - [Targeting infrastructure in South East Asia](URL to source)
-* Active from - XX Month 20XX
-* Active to - XX Month 20XX
+## Campaign or Date Range
+* Date Range
+* About - [Targeting airlines, aitcraft services, software, IT services, telecom Services, payroll and engineering services in the Middle East](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Active from - 01 January 2017
+* Active to - 31 December 2017
 
 ### Attributes
-Listed after Campaign or Date Range as attributes can shift over time. Use one of the resource levels. Use one of the sophistication grades. Amateur is defined as using all prewritten tools and/or showing overall poor tradecraft. Expert is defined as using at least some self-written tools and/or showing overall good tradecraft. Advanced Expert is defined as consistently using self-written tools and showing consistently good tradecraft. Primary activity is a short description of what the groups mostly does.
-* Resource level - [Individual / Group / Corporation / Government](URL to source)
-* Sophistication - [Amateur / Expert / Advanced Expert](URL to source)
-* Primary activities - Description goes here
+* Resource level - [Government](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Sophistication - [Expert](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Primary activities - Chafer appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance.
 
 ### Attack Pattern
 See the [Enterprise Matrix](https://attack.mitre.org/) for definitions of each of the below areas. Use in the order they occur and state no information for entries that don't yet have any information. Malware should have a short description and be detailed below.
@@ -400,3 +390,5 @@ https://www.itsecuritynews.info/apt39-an-iranian-cyber-espionage-group-focused-o
 https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions
 
 https://www.securityweek.com/apparently-linked-iran-spy-groups-target-middle-east
+
+https://www.symantec.com/connect/blogs/iran-based-attackers-use-back-door-threats-spy-middle-eastern-targets
