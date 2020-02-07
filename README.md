@@ -8,7 +8,7 @@
 * [Alias](URL to source)
 
 ## Overview 
-* Chafer is believed to be an Iranian APT and appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance. Targeting occurs within Iran and elsewhere in the Middle East.
+* Chafer is believed to be an Iranian APT and appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance. Targeting occurs within Iran, elsewhere in the Middle East, Africa, and outside the region in multinational corporations.
 
 ## Campaign or Date Range
 * Date Range
