@@ -68,9 +68,11 @@
 
 #### Affiliated organisations
 * [Islamic Republic of Iran](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Attribution - Symantec attributes this APT to Iran.
 
 #### Affiliated groups
 * [OilRig](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Attribution - Symantec note that Chafer’s activities have some links to Oilrig. Both groups have been observed using the same IP address for command and control purposes. In addition to this, both groups have been seen using a similar infection vector, an Excel document which drops a malicious VBS file. Both VBS files reference the same file path, containing the same misspelling: “schtasks.exe /create/ F /sc minute /mo 2 /tn "UpdatMachine" /tr %LOCALAPPDATA%\microsoft\Feed\Y658123.vbs”
 
 ### Intrusion Set
 
@@ -187,9 +189,11 @@ Individuals, organizations, or groups. These are represented as individual entri
 
 #### Affiliated organisations
 * [Islamic Republic of Iran](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Attribution - Symantec attributes this APT to Iran.
 
 #### Affiliated groups
 * [OilRig](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Attribution - Symantec note that Chafer’s activities have some links to Oilrig. Both groups have been observed using the same IP address for command and control purposes. In addition to this, both groups have been seen using a similar infection vector, an Excel document which drops a malicious VBS file. Both VBS files reference the same file path, containing the same misspelling: “schtasks.exe /create/ F /sc minute /mo 2 /tn "UpdatMachine" /tr %LOCALAPPDATA%\microsoft\Feed\Y658123.vbs”
 
 ### Intrusion Set
 A grouped set of adversarial behaviours and resources with common properties believed to be orchestrated by a single threat actor. These are represented as individual categories under the heading of Intrusion Set. If an existing category does not cover what you need to add, contact a project maintainer on panopticonproject at protonmail dot com to add a section to Charon.
@@ -258,6 +262,26 @@ A document used by the attackers, usually as part of phishing. About should be a
 * Names - [Non-sucking Service Manager (NSSM)](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * Functionality - Nssm monitors the running service and will restart it if it dies. Nssm logs its progress to the system Event Log so you can get some idea of why an application isn't behaving as it should.
   * URL - https://nssm.cc/
+
+* Names - [Custom screenshot and clipboard capture tool](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Screenshot and clipboard capture.
+  * URL - N/A
+  
+* Names - [SMB hacking tools](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Tools include the EternalBlue exploit.
+  * URL - N/A
+
+* Names - [GNU HTTPTunnel](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Tools include the EternalBlue exploit.
+  * URL - http://neophob.com/2006/10/gnu-httptunnel-v33-windows-binaries/
+
+* Names - [UltraVNC](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - UltraVNC, an open-source remote-administration/remote-desktop-software utility for Microsoft Windows, uses the VNC protocol to control/access another computer remotely over a network connection.
+  * URL - https://www.uvnc.com/
+
+* Names - [NBTScan](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - A command-line tool that scans for open NETBIOS nameservers on a local or remote TCP/IP network, and is a first step in finding of open shares.
+  * URL - http://unixwiz.net/tools/nbtscan.html
   
 ## Time context ends
 
