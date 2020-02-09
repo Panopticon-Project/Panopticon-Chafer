@@ -13,6 +13,122 @@
 ## Campaign or Date Range
 * Date Range
 * About - [Targeting airlines, aitcraft services, software, IT services, telecom Services, payroll and engineering services in the Middle East](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Active from - 01 January 2015
+* Active to - 31 December 2015
+
+### Attributes
+* Resource level - [Government](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Sophistication - [Expert](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Primary activities - Chafer appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance.
+
+### Attack Pattern
+* Initial Access 
+  * [Exploit Public-Facing Application](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * In the earlier attacks from 2015, Symantec found evidence that Chafer had been compromising targeted organizations by attacking their web servers, likely through SQL injection attacks, in order to drop malware onto them.
+* Execution
+  * [Attack Pattern](URL to source)
+  * Description
+* Persistence
+  * [Attack Pattern](URL to source)
+  * Description
+* Privilege Escalation 
+  * [Attack Pattern](URL to source)
+  * Description
+* Defence Evasion 
+  * [Attack Pattern](URL to source)
+  * Description
+* Credential Access
+  * [Attack Pattern](URL to source)
+  * Description
+* Discovery
+  * [Attack Pattern](URL to source)
+  * Description
+* Lateral Movement
+  * [Attack Pattern](URL to source)
+  * Description
+* Collection
+  * [Attack Pattern](URL to source)
+  * Description
+* Exfiltration 
+  * [Attack Pattern](URL to source)
+  * Description
+* Command and Control 
+  * [Attack Pattern](URL to source)
+  * Description
+* Malware - Description goes here
+
+### Vulnerabilities
+* [Vulnerability](URL to outline of how vulnerability is exploited) is exploited by name of malware / name of tool
+* [Vulnerability](URL to outline of how vulnerability is exploited) is exploited by name of malware / name of tool
+
+### Identity
+
+#### Individuals 
+[No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+
+#### Affiliated organisations
+* [Islamic Republic of Iran](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+
+#### Affiliated groups
+* [OilRig](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+
+### Intrusion Set
+
+#### Malware
+* Names - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - N/A
+  * Hash - N/A
+  * Notes - N/A
+
+#### Website 
+* Name - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * About - N/A
+  * URL - N/A
+  * IP - N/A
+  * Valid from - N/A
+  * Valid to - N/A
+
+#### Command and Control Server
+* IP - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid from - N/A
+  * Valid to - N/A
+  * [SSH host key] (URL to source)
+    * RSA - N/A
+    * ECDSA - N/A
+    * ED25519 - N/A
+  * [SSL Certificate](URL to source)
+    * Issuer - N/A
+    * Public key type - N/A
+    * Public key bits - N/A
+    * Signature algorithm - N/A
+    * Not valid before - N/A
+    * Not valid after - N/A
+    * MD5 - N/A
+    * SHA-1 - N/A
+  * Notes - N/A
+
+#### Documents
+* Filename - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * About - N/A
+  * Hash - N/A
+  * Notes - N/A
+
+#### Tools
+* Names - [PsExec](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - PsExec is a light-weight telnet-replacement that lets you execute processes on other systems, complete with full interactivity for console applications, without having to manually install client software. 
+  * URL - https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+
+* Names - [Mimikatz](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Mimikatz can extract plaintexts passwords, hash, PIN code and kerberos tickets on a Windows system from memory. Mimikatz can also perform pass-the-hash, pass-the-ticket or build Golden tickets.
+  * URL - https://github.com/gentilkiwi/mimikatz
+  
+* Names - [Plink (PuTTY Link)](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - PuTTY is a free implementation of SSH and Telnet for Windows and Unix platforms, along with an xterm terminal emulator.
+  * URL - https://www.chiark.greenend.org.uk/~sgtatham/putty/
+  
+## Campaign or Date Range
+* Date Range
+* About - [Targeting airlines, aitcraft services, software, IT services, telecom Services, payroll and engineering services in the Middle East](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 * Active from - 01 January 2017
 * Active to - 31 December 2017
 
@@ -22,11 +138,9 @@
 * Primary activities - Chafer appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance.
 
 ### Attack Pattern
-See the [Enterprise Matrix](https://attack.mitre.org/) for definitions of each of the below areas. Use in the order they occur and state no information for entries that don't yet have any information. Malware should have a short description and be detailed below.
-Use list
 * Initial Access 
-  * [Attack Pattern](URL to source)
-  * Description
+  * [Spearphishing Attachment](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * In 2017, the group added a new infection method to its toolkit, using malicious documents which are likely circulated using spear-phishing emails sent to individuals working in targeted organizations. These documents were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script. Several hours later, a dropper would appear on the compromised computer. This would install three files on the computer, an information stealer, a screen capture utility, and an empty executable.
 * Execution
   * [Attack Pattern](URL to source)
   * Description
@@ -69,22 +183,13 @@ Use list
 Individuals, organizations, or groups. These are represented as individual entries under the heading of Identity.
 
 #### Individuals 
-Specific members of threat actor. State no information for entries that don't yet have any information.
-Use list
-* [Name](URL to source)
-* [Name](URL to source)
+[No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 
 #### Affiliated organisations
-Specific organisations the threat actor is connected to. State no information for entries that don't yet have any information.
-Use list
-* [Organisation](URL to source)
-* [Organisation](URL to source)
+* [Islamic Republic of Iran](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 
 #### Affiliated groups
-Specific groups the threat actor is connected to. State no information for entries that don't yet have any information.
-Use list
-* [Group](URL to source)
-* [Group](URL to source)
+* [OilRig](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 
 ### Intrusion Set
 A grouped set of adversarial behaviours and resources with common properties believed to be orchestrated by a single threat actor. These are represented as individual categories under the heading of Intrusion Set. If an existing category does not cover what you need to add, contact a project maintainer on panopticonproject at protonmail dot com to add a section to Charon.
@@ -134,11 +239,26 @@ A document used by the attackers, usually as part of phishing. About should be a
   * Notes - Notes go here
 
 #### Tools
-A tool used by the attacker. Multiple names should be listed on the same line and separated by a comma. functionalities should be short, preferably one word. Example: keylogger. Multiple functionalites should be listed on the same line and separated by a comma. URL should be the online address, if any, the tool can be publicly sourced from.
-* Names - [Name of tool](URL to source)
-  * Functionality - Functionality, functionality 
-  * URL - http://address.com
+* Names - [PsExec](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - PsExec is a light-weight telnet-replacement that lets you execute processes on other systems, complete with full interactivity for console applications, without having to manually install client software. 
+  * URL - https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
 
+* Names - [Mimikatz](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Mimikatz can extract plaintexts passwords, hash, PIN code and kerberos tickets on a Windows system from memory. Mimikatz can also perform pass-the-hash, pass-the-ticket or build Golden tickets.
+  * URL - https://github.com/gentilkiwi/mimikatz
+  
+* Names - [Plink (PuTTY Link)](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - PuTTY is a free implementation of SSH and Telnet for Windows and Unix platforms, along with an xterm terminal emulator.
+  * URL - https://www.chiark.greenend.org.uk/~sgtatham/putty/
+
+* Names - [Remcom](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - RemCom is a small (10KB upx packed) remoteshell / telnet replacement that lets you execute processes on remote windows systems, copy files on remote systems, process there output and stream it back. It allows execution of remote shell commands directly with full interactive console without having to install any client software. On local machines it is also able to impersonate so can be used as a silent replacement for Runas command.
+  * URL - https://github.com/kavika13/RemCom
+
+* Names - [Non-sucking Service Manager (NSSM)](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Nssm monitors the running service and will restart it if it dies. Nssm logs its progress to the system Event Log so you can get some idea of why an application isn't behaving as it should.
+  * URL - https://nssm.cc/
+  
 ## Time context ends
 
 ### Detection - end of repeatable time contextual section 
