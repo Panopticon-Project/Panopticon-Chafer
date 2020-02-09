@@ -4,11 +4,10 @@
 * Label - Advanced Persistent Threat (APT) 
 
 ## Aliases
-* [Alias](URL to source)
-* [Alias](URL to source)
+* [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 
 ## Overview 
-* Chafer is believed to be an Iranian APT and appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance. Targeting occurs within Iran, elsewhere in the Middle East, Africa, and outside the region in multinational corporations.
+* Chafer is believed to be an Iranian APT and appears to be primarily engaged in surveillance and tracking of individuals, with most of its attacks likely carried out to gather information on targets or facilitate surveillance. Targeting occurs within Iran, elsewhere in the Middle East, Africa, and multinational corporations across the world.
 
 ## Campaign or Date Range
 * Date Range
@@ -26,40 +25,28 @@
   * [Exploit Public-Facing Application](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * In the earlier attacks from 2015, Symantec found evidence that Chafer had been compromising targeted organizations by attacking their web servers, likely through SQL injection attacks, in order to drop malware onto them.
 * Execution
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Persistence
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Privilege Escalation 
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Defence Evasion 
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Credential Access
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Discovery
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Lateral Movement
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Collection
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Exfiltration 
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Command and Control 
-  * [Attack Pattern](URL to source)
-  * Description
-* Malware - Description goes here
+  * No information
 
 ### Vulnerabilities
-* [Vulnerability](URL to outline of how vulnerability is exploited) is exploited by name of malware / name of tool
-* [Vulnerability](URL to outline of how vulnerability is exploited) is exploited by name of malware / name of tool
+* [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 
 ### Identity
 
@@ -77,10 +64,10 @@
 ### Intrusion Set
 
 #### Malware
-* Names - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * Functionality - N/A
+* Names - [Remexi, Remexi.B](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Backdoor
   * Hash - N/A
-  * Notes - N/A
+  * Notes - The malware is simply described as a backdoor by Symantic, there are later writeups covering functionality of Remexi.
 
 #### Website 
 * Name - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
@@ -90,15 +77,16 @@
   * Valid from - N/A
   * Valid to - N/A
 
-#### Command and Control Server
+#### Command and Control Server or Domain
 * IP - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+* Domain - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * Valid from - N/A
   * Valid to - N/A
-  * [SSH host key] (URL to source)
+  * SSH host key
     * RSA - N/A
     * ECDSA - N/A
     * ED25519 - N/A
-  * [SSL Certificate](URL to source)
+  * SSL Certificate
     * Issuer - N/A
     * Public key type - N/A
     * Public key bits - N/A
@@ -147,7 +135,7 @@
   * [Attack Pattern](URL to source)
   * Description
 * Persistence
-  * [Attack Pattern](URL to source)
+  * [Attack Pattern](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * Description
 * Privilege Escalation 
   * [Attack Pattern](URL to source)
@@ -176,10 +164,7 @@
 * Malware - Description goes here
 
 ### Vulnerabilities
-A mistake in software that can be directly used by an attacker to gain access to a system or network. Link to a writeup in the exploit repo where possible (example, CVEs) or to external sources. Format should be in the format of vulnerability is exploited by name of the thing exploiting it, usually malware or a hacking tool. State no information if no information is available.
-Use list
-* [Vulnerability](URL to outline of how vulnerability is exploited) is exploited by name of malware / name of tool
-* [Vulnerability](URL to outline of how vulnerability is exploited) is exploited by name of malware / name of tool
+* [MS17-010](https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2017/ms17-010) is exploited by SMB hacking tools. [1](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
 
 ### Identity
 Individuals, organizations, or groups. These are represented as individual entries under the heading of Identity.
@@ -196,28 +181,104 @@ Individuals, organizations, or groups. These are represented as individual entri
   * Attribution - Symantec note that Chafer’s activities have some links to Oilrig. Both groups have been observed using the same IP address for command and control purposes. In addition to this, both groups have been seen using a similar infection vector, an Excel document which drops a malicious VBS file. Both VBS files reference the same file path, containing the same misspelling: “schtasks.exe /create/ F /sc minute /mo 2 /tn "UpdatMachine" /tr %LOCALAPPDATA%\microsoft\Feed\Y658123.vbs”
 
 ### Intrusion Set
-A grouped set of adversarial behaviours and resources with common properties believed to be orchestrated by a single threat actor. These are represented as individual categories under the heading of Intrusion Set. If an existing category does not cover what you need to add, contact a project maintainer on panopticonproject at protonmail dot com to add a section to Charon.
 
 #### Malware
-Details of malware used. Multiple names should be listed on the same line and separated by a comma. Functionality should be short, preferably one word. Example: keylogger. Multiple functionalities should be listed on the same line and separated by a comma. Hash should have a -, the type of hashing function used, another -, and the hash itself. Example: Hash - MD5 - 002ae76872d80801692ff942308c64t6. Notes should be a short description of anything else important, like the family the malware belongs to or variants. State no information for entries that don't yet have any information.
-* Names - [Name of malware](URL to source)
-  * Functionality - add functionality
-  * Hash - [Function] - [Actual hash](URL to source)
-  * Notes - Description goes here
+* Names - [Remexi, Remexi.B](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Backdoor
+  * Hash - N/A
+  * Notes - The malware is simply described as a backdoor by Symantic, there are later writeups covering functionality of Remexi.
 
 #### Website 
-A website used by the attacker. URLs should be in the format of hxxp so people don't accidentablly navigate to the URL by clicking on it. IP addresses shouldhave square brackets [] arond the last separator so people don't accidentally navigate to the address. Dates should be in the format of DD Month Year e.g. 01 January 2019. State no information for entries that don't yet have any information.
-* Name - Name of website
-  * About - Description goes here
-  * URL - [hxxp://address[.]com](URL to source)
-  * IP - [000.000.000[.]000](URL to source)
-  * Valid from - [XX Month 20XX](URL to source)
-  * Valid to - [XX Month 20XX](URL to source)
+* Name - No information
+  * About - N/A
+  * URL - N/A
+  * IP - N/A
+  * Valid from - N/A
+  * Valid to - N/A
 
-#### Command and Control Server
-A server used by the attackers to send commands to malware and to receive commands and exfiltrated information from the malware.
-* About - used by Even More Muffins malware to receive commands from and exfiltrate data to. IP addresses should have square brackets [] around the last separator so people don't accidentally navigate to the address. Dates should be in the format of DD Month Year e.g. 01 January 2019.
-* IP - [000.000.000[.]000](URL to source)
+#### Command and Control Server or Domain
+* Domain - [win7-updates[.]com](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid from - [01 January 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid to - [31 Decemeber 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * [SSH host key]
+    * RSA - N/A
+    * ECDSA - N/A
+    * ED25519 - N/A
+  * [SSL Certificate]
+    * Issuer - N/A
+    * Public key type - N/A
+    * Public key bits - N/A
+    * Signature algorithm - N/A
+    * Not valid before - N/A
+    * Not valid after - N/A
+    * MD5 - N/A
+    * SHA-1 - N/A
+  * Notes
+    * One article dated 28 February 2018 details the domain win7-updates[.]com, stating only that the domain was used by the attacker. As such the date range is imprecise.
+
+* IP - [107.191.62[.]45](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid from - [01 January 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid to - [31 Decemeber 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * SSH host key
+    * RSA - N/A
+    * ECDSA - N/A
+    * ED25519 - N/A
+  * SSL Certificate
+    * Issuer - N/A
+    * Public key type - N/A
+    * Public key bits - N/A
+    * Signature algorithm - N/A
+    * Not valid before - N/A
+    * Not valid after - N/A
+    * MD5 - N/A
+    * SHA-1 - N/A
+  * Notes
+    * One article dated 28 February 2018 details the domain win7-updates[.]com, stating only that the domain was used by the attacker. As such the date range is imprecise.
+    * It is unclear whether these were leased or hijacked, but the fact that many of them appear to follow a pattern—with the latter three numbers of each address often running in sequence—makes it likely they were deliberately selected by the attackers.
+
+* IP - [94.100.21[.]213](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid from - [01 January 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid to - [31 Decemeber 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * SSH host key
+    * RSA - N/A
+    * ECDSA - N/A
+    * ED25519 - N/A
+  * SSL Certificate
+    * Issuer - N/A
+    * Public key type - N/A
+    * Public key bits - N/A
+    * Signature algorithm - N/A
+    * Not valid before - N/A
+    * Not valid after - N/A
+    * MD5 - N/A
+    * SHA-1 - N/A
+  * Notes
+    * One article dated 28 February 2018 details the domain win7-updates[.]com, stating only that the domain was used by the attacker. As such the date range is imprecise.
+    * It is unclear whether these were leased or hijacked, but the fact that many of them appear to follow a pattern—with the latter three numbers of each address often running in sequence—makes it likely they were deliberately selected by the attackers.
+
+* IP - [89.38.97[.]112](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid from - [01 January 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Valid to - [31 Decemeber 2017](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * SSH host key
+    * RSA - N/A
+    * ECDSA - N/A
+    * ED25519 - N/A
+  * SSL Certificate
+    * Issuer - N/A
+    * Public key type - N/A
+    * Public key bits - N/A
+    * Signature algorithm - N/A
+    * Not valid before - N/A
+    * Not valid after - N/A
+    * MD5 - N/A
+    * SHA-1 - N/A
+  * Notes
+    * One article dated 28 February 2018 details the domain win7-updates[.]com, stating only that the domain was used by the attacker. As such the date range is imprecise.
+    * It is unclear whether these were leased or hijacked, but the fact that many of them appear to follow a pattern—with the latter three numbers of each address often running in sequence—makes it likely they were deliberately selected by the attackers.
+    
+Here add more Ips
+
+  * Domain - [000.000.000[.]000](URL to source)
   * Valid from - [XX Month 20XX](URL to source)
   * Valid to - [XX Month 20XX](URL to source)
   * [SSH host key] (URL to source)
@@ -234,7 +295,60 @@ A server used by the attackers to send commands to malware and to receive comman
     * MD5 - MD5 hash
     * SHA-1 - SHA-1 hash
   * Notes - notes go here.
-
+  
+  * Domain - [000.000.000[.]000](URL to source)
+  * Valid from - [XX Month 20XX](URL to source)
+  * Valid to - [XX Month 20XX](URL to source)
+  * [SSH host key] (URL to source)
+    * RSA - fingerprint
+    * ECDSA - fingerprint
+    * ED25519 - fingerprint
+  * [SSL Certificate](URL to source)
+    * Issuer - Name
+    * Public key type - RSA etc
+    * Public key bits - Bit length
+    * Signature algorithm - name of algorithm
+    * Not valid before - XX Month 20XX
+    * Not valid after - XX Month 20XX
+    * MD5 - MD5 hash
+    * SHA-1 - SHA-1 hash
+  * Notes - notes go here.
+  
+  * Domain - [000.000.000[.]000](URL to source)
+  * Valid from - [XX Month 20XX](URL to source)
+  * Valid to - [XX Month 20XX](URL to source)
+  * [SSH host key] (URL to source)
+    * RSA - fingerprint
+    * ECDSA - fingerprint
+    * ED25519 - fingerprint
+  * [SSL Certificate](URL to source)
+    * Issuer - Name
+    * Public key type - RSA etc
+    * Public key bits - Bit length
+    * Signature algorithm - name of algorithm
+    * Not valid before - XX Month 20XX
+    * Not valid after - XX Month 20XX
+    * MD5 - MD5 hash
+    * SHA-1 - SHA-1 hash
+  * Notes - notes go here.
+  
+  * Domain - [000.000.000[.]000](URL to source)
+  * Valid from - [XX Month 20XX](URL to source)
+  * Valid to - [XX Month 20XX](URL to source)
+  * [SSH host key] (URL to source)
+    * RSA - fingerprint
+    * ECDSA - fingerprint
+    * ED25519 - fingerprint
+  * [SSL Certificate](URL to source)
+    * Issuer - Name
+    * Public key type - RSA etc
+    * Public key bits - Bit length
+    * Signature algorithm - name of algorithm
+    * Not valid before - XX Month 20XX
+    * Not valid after - XX Month 20XX
+    * MD5 - MD5 hash
+    * SHA-1 - SHA-1 hash
+  * Notes - notes go here.
 #### Documents
 A document used by the attackers, usually as part of phishing. About should be a short description of how the document was used. Hash should have a -, the type of hashing function used, another -, and the hash itself. Example: Hash - MD5 - 002ae76872d80801692ff942308c64t6.
 * Filename - [Name](URL to source)
@@ -438,20 +552,18 @@ Use list
 A grouped set of adversarial behaviours and resources with common properties believed to be orchestrated by a single threat actor. These are represented as individual categories under the heading of Intrusion Set. If an existing category does not cover what you need to add, contact a project maintainer on panopticonproject at protonmail dot com to add a section to Charon.
 
 #### Malware
-Details of malware used. Multiple names should be listed on the same line and separated by a comma. Functionality should be short, preferably one word. Example: keylogger. Multiple functionalities should be listed on the same line and separated by a comma. Hash should have a -, the type of hashing function used, another -, and the hash itself. Example: Hash - MD5 - 002ae76872d80801692ff942308c64t6. Notes should be a short description of anything else important, like the family the malware belongs to or variants. State no information for entries that don't yet have any information.
-* Names - [Name of malware](URL to source)
-  * Functionality - add functionality
-  * Hash - [Function] - [Actual hash](URL to source)
-  * Notes - Description goes here
+* Names - [Remexi, Remexi.B](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Functionality - Backdoor
+  * Hash - N/A
+  * Notes - The malware is simply described as a backdoor by Symantic, there are later writeups covering functionality of Remexi.
 
 #### Website 
-A website used by the attacker. URLs should be in the format of hxxp so people don't accidentablly navigate to the URL by clicking on it. IP addresses shouldhave square brackets [] arond the last separator so people don't accidentally navigate to the address. Dates should be in the format of DD Month Year e.g. 01 January 2019. State no information for entries that don't yet have any information.
-* Name - Name of website
-  * About - Description goes here
-  * URL - [hxxp://address[.]com](URL to source)
-  * IP - [000.000.000[.]000](URL to source)
-  * Valid from - [XX Month 20XX](URL to source)
-  * Valid to - [XX Month 20XX](URL to source)
+* Name - [No information](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * About - N/A
+  * URL - N/A
+  * IP - N/A
+  * Valid from - N/A
+  * Valid to - N/A
 
 #### Command and Control Server
 A server used by the attackers to send commands to malware and to receive commands and exfiltrated information from the malware.
@@ -536,3 +648,5 @@ https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-
 https://www.securityweek.com/apparently-linked-iran-spy-groups-target-middle-east
 
 https://www.symantec.com/connect/blogs/iran-based-attackers-use-back-door-threats-spy-middle-eastern-targets
+
+https://securelist.com/chafer-used-remexi-malware/89538/
