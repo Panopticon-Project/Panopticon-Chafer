@@ -152,16 +152,18 @@
 * Credential Access
   * [Input Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
-  * [Forced Authentication]
+  * [Forced Authentication](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * SMB hacking tools where used in conjunction with other tools to traverse target networks. These tools include the EternalBlue exploit.
 * Discovery
   * [Attack Pattern](URL to source)
   * Description
 * Lateral Movement
   * [Pass the Hash](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * Mimikatz part of toolset
-* [Pass the Ticket](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * Mimikatz part of toolset
+  * Mimikatz part of toolset.
+  * [Pass the Ticket](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Mimikatz part of toolset.
+  * [Remote Desktop Protocol](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Plink part of toolset.
 * Collection
   * [Clipboard Data]
   * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
@@ -173,8 +175,8 @@
   * [Attack Pattern](URL to source)
   * Description
 * Command and Control 
-  * [AttackThe screen capture utility appeared to be used for initial information gathering, as it was only used briefly at the beginning of each infection and not seen again.  Pattern](URL to source)
-  * Description
+  * [Remote Access Tools](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * GNU HTTPTunnel and UltraVNC part of toolset.
 
 ### Vulnerabilities
 * [MS17-010](https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2017/ms17-010) is exploited by SMB hacking tools. [1](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
