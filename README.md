@@ -132,13 +132,17 @@
   * [Exploit Public-Facing Application](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * In the earlier attacks from 2015, Symantec found evidence that Chafer had been compromising targeted organizations by attacking their web servers, likely through SQL injection attacks, in order to drop malware onto them.
   * [Spearphishing Attachment](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * In 2017, the group added a new infection method to its toolkit, using malicious documents which are likely circulated using spear-phishing emails sent to individuals working in targeted organizations. These documents were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script. Several hours later, a dropper would appear on the compromised computer. This would install three files on the computer, an information stealer, a screen capture utility, and an empty executable.
+  * In 2017, the group added a new infection method to its toolkit, using malicious documents which are likely circulated using spear-phishing emails sent to individuals working in targeted organizations.
 * Execution
-  * [Attack Pattern](URL to source)
-  * Description
+  * [PowerShell](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The documents used in spearphishing were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script.
+  * [Scripting](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The documents used in spearphishing were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script.
+  * [Service Execution](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Remcom, PsExec used to start and stop services. NSSM used to install and remove services.
 * Persistence
-  * [Attack Pattern](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * Description
+  * [Office Application Startup](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * When opened, the documents downloaded a malicious VBS file that in turn ran a PowerShell script. Several hours later, a dropper would appear on the compromised computer. This would install three files on the computer, an information stealer, a screen capture utility, and an empty executable.
 * Privilege Escalation 
   * [Attack Pattern](URL to source)
   * Description
@@ -146,24 +150,31 @@
   * [Attack Pattern](URL to source)
   * Description
 * Credential Access
-  * [Attack Pattern](URL to source)
-  * Description
+  * [Input Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
+  * [Forced Authentication]
+  * SMB hacking tools where used in conjunction with other tools to traverse target networks. These tools include the EternalBlue exploit.
 * Discovery
   * [Attack Pattern](URL to source)
   * Description
 * Lateral Movement
-  * [Attack Pattern](URL to source)
-  * Description
+  * [Pass the Hash](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Mimikatz part of toolset
+* [Pass the Ticket](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Mimikatz part of toolset
 * Collection
-  * [Attack Pattern](URL to source)
-  * Description
+  * [Clipboard Data]
+  * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
+  * [Input Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
+  * [Screen Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The screen capture utility appeared to be used for initial information gathering, as it was only used briefly at the beginning of each infection and not seen again. 
 * Exfiltration 
   * [Attack Pattern](URL to source)
   * Description
 * Command and Control 
-  * [Attack Pattern](URL to source)
+  * [AttackThe screen capture utility appeared to be used for initial information gathering, as it was only used briefly at the beginning of each infection and not seen again.  Pattern](URL to source)
   * Description
-* Malware - Description goes here
 
 ### Vulnerabilities
 * [MS17-010](https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2017/ms17-010) is exploited by SMB hacking tools. [1](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
