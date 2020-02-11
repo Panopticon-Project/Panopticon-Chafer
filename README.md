@@ -135,35 +135,35 @@
   * In 2017, the group added a new infection method to its toolkit, using malicious documents which are likely circulated using spear-phishing emails sent to individuals working in targeted organizations.
 * Execution
   * [PowerShell](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * The documents used in spearphishing were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script.
+  * The documents used in spearphishing were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script. Several hours later, a dropper would appear on the compromised computer. This would install three files on the computer, an information stealer, a screen capture utility, and an empty executable.
   * [Scripting](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * The documents used in spearphishing were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script.
+  * The documents used in spearphishing were Excel spreadsheets. When opened, they downloaded a malicious VBS file that in turn ran a PowerShell script. Several hours later, a dropper would appear on the compromised computer. This would install three files on the computer, an information stealer, a screen capture utility, and an empty executable.
   * [Service Execution](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * Remcom, PsExec used to start and stop services. NSSM used to install and remove services.
 * Persistence
-  * [Office Application Startup](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * When opened, the documents downloaded a malicious VBS file that in turn ran a PowerShell script. Several hours later, a dropper would appear on the compromised computer. This would install three files on the computer, an information stealer, a screen capture utility, and an empty executable.
+  * [New Service](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The group has recently adopted NSSM to maintain persistence and install the service which runs Plink on the compromised computer. Plink is then used to open reverse SSH sessions from the attacker's server to the RDP port on the victim computer. 
+  * [Scheduled Task](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * The group has recently adopted NSSM to maintain persistence and install the service which runs Plink on the compromised computer. Plink is then used to open reverse SSH sessions from the attacker's server to the RDP port on the victim computer. 
 * Privilege Escalation 
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Defence Evasion 
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Credential Access
   * [Input Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
   * [Forced Authentication](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * SMB hacking tools where used in conjunction with other tools to traverse target networks. These tools include the EternalBlue exploit.
 * Discovery
-  * [Attack Pattern](URL to source)
-  * Description
+  * [System Network Configuration Discovery](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * NBTScan was used to find share drives and devices on a network.
 * Lateral Movement
   * [Pass the Hash](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * Mimikatz part of toolset.
   * [Pass the Ticket](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * Mimikatz part of toolset.
   * [Remote Desktop Protocol](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
-  * Plink part of toolset.
+  * Plink part of toolset, used in conjunction with NSSM to keep PLink running and maintain persistence.
 * Collection
   * [Clipboard Data]
   * The information stealer was capable of stealing the contents of the clipboard, taking screenshots, recording keystrokes and stealing files and user credentials.
@@ -172,8 +172,7 @@
   * [Screen Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * The screen capture utility appeared to be used for initial information gathering, as it was only used briefly at the beginning of each infection and not seen again. 
 * Exfiltration 
-  * [Attack Pattern](URL to source)
-  * Description
+  * No information
 * Command and Control 
   * [Remote Access Tools](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
   * GNU HTTPTunnel and UltraVNC part of toolset.
@@ -570,9 +569,29 @@
   
 ## Time context ends
 
-### Detection - end of repeatable time contextual section 
-An action taken to detect an Attack Pattern entry. These should address the Attack Patterns listed above. State no information if no information is available.
-Use list
+### Detection 
+* [Exploit Public-Facing Application](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Monitor application logs for abnormal behavior that may indicate attempted or successful exploitation. 
+  * Use deep packet inspection to look for artifacts of common exploit traffic, such as SQL injection. 
+  * Web Application Firewalls may detect improper inputs attempting exploitation.
+* [Spearphishing Attachment](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Network intrusion detection systems can be used to detect spearphishing with malicious attachments in transit.
+  * Email gateways can be used to detect spearphishing with malicious attachments in transit. 
+  * Detonation chambers may also be used to identify malicious attachments.  
+  * Anti-virus can potentially detect malicious documents and attachments as they're scanned to be stored on the email server or on the user's computer. 
+  * Endpoint sensing or network sensing can potentially detect malicious events once the attachment is opened (such as a Microsoft Word document or PDF reaching out to the internet or spawning Powershell.exe) for techniques such as Exploitation for Client Execution and Scripting.
+* [PowerShell](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * If proper execution policy is set, adversaries will likely be able to define their own execution policy if they obtain administrator or system access, either through the Registry or at the command line. This change in policy on a system may be a way to detect malicious use of PowerShell. 
+  * If PowerShell is not used in an environment, then simply looking for PowerShell execution may detect malicious activity.
+  * Monitor for loading and/or execution of artifacts associated with PowerShell specific assemblies, such as System.Management.Automation.dll (especially to unusual process names/locations). 
+  * It is also beneficial to turn on PowerShell logging to gain increased fidelity in what occurs during execution (which is applied to .NET invocations). PowerShell 5.0 introduced enhanced logging capabilities, and some of those features have since been added to PowerShell 4.0. Earlier versions of PowerShell do not have many logging features. 
+  * An organization can gather PowerShell execution details in a data analytic platform to supplement it with other data.
+* [Scripting](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Scripting may be common on admin, developer, or power user systems, depending on job function. If scripting is restricted for normal users, then any attempts to enable scripts running on a system would be considered suspicious. 
+  * If scripts are not commonly used on a system, but enabled, scripts running out of cycle from patching or other administrator functions are suspicious. 
+  * Scripts should be captured from the file system when possible to determine their actions and intent.
+  * Scripts are likely to perform actions with various effects on a system that may generate events, depending on the types of monitoring used. Monitor processes and command-line arguments for script execution and subsequent behavior. Actions may be related to network and system information Discovery, Collection, or other scriptable post-compromise behaviors and could be used as indicators of detection leading back to the source script.
+  * Analyze Office file attachments for potentially malicious macros. Execution of macros may create suspicious process trees depending on what the macro is designed to do. Office processes, such as winword.exe, spawning instances of cmd.exe, script application like wscript.exe or powershell.exe, or other suspicious processes may indicate malicious activity.
 * [Attack Pattern or Vulnerability entry goes here](URL to source)
   * Description
 
