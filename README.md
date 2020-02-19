@@ -636,11 +636,16 @@
   * Use of RDP may be legitimate, depending on the network environment and how it is used. Other factors, such as access patterns and activity that occurs after a remote login, may indicate suspicious or malicious behavior with RDP. 
   * Monitor for user accounts logged into systems they would not normally access or access patterns to multiple systems over a relatively short period of time.
   * Set up process monitoring for tscon.exe usage and monitor service creation that uses cmd.exe /k or cmd.exe /c in its arguments to prevent RDP session hijacking.
- 
-* [Attack Pattern or Vulnerability entry goes here](URL to source)
-  * Description  
-* [Attack Pattern or Vulnerability entry goes here](URL to source)
-  * Description   
+* [Clipboard Data](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Access to the clipboard is a legitimate function of many applications on a Windows system. If an organization chooses to monitor for this behavior, then the data will likely need to be correlated against other suspicious or non-user-driven activity.
+* [Screen Capture](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Monitoring for screen capture behavior will depend on the method used to obtain data from the operating system and write output files. Detection methods could include collecting information from unusual processes using API calls used to obtain image data, and monitoring for image files written to disk. 
+  * The sensor data may need to be correlated with other events to identify malicious activity, depending on the legitimacy of this behavior within a given network environment.
+* [Remote Access Tools](https://www.symantec.com/blogs/threat-intelligence/chafer-latest-attacks-reveal-heightened-ambitions)
+  * Monitor for applications and processes related to remote admin tools. Correlate activity with other suspicious behavior that may reduce false positives if these tools are used by legitimate users and administrators.
+  * Analyze network data for uncommon data flows (e.g., a client sending significantly more data than it receives from a server). Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. 
+  * Analyze packet contents to detect application layer protocols that do not follow the expected protocol for the port that is being used.
+* Domain Fronting may be used in conjunction to avoid defenses. Adversaries will likely need to deploy and/or install these remote tools to compromised systems. It may be possible to detect or prevent the installation of these tools with host-based solutions. 
   
 ### Course of Action 
 An action taken to either prevent an attack or respond to an attack. These should address the Attack Patterns and Vulnerabilities listed above. If the course of action is connected to something in this report, such as a CVE for example, that should be referenced. Example: Apply patch 5678 to ICS systems to patch CVE-2019-0254. State no information if no information is available.
