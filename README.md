@@ -684,3 +684,5 @@ https://www.securityweek.com/apparently-linked-iran-spy-groups-target-middle-eas
 https://www.symantec.com/connect/blogs/iran-based-attackers-use-back-door-threats-spy-middle-eastern-targets
 
 https://securelist.com/chafer-used-remexi-malware/89538/
+
+https://threatpost.com/chafer-apt-hits-middle-east-govs-with-latest-cyber-espionage-attacks/156002/
