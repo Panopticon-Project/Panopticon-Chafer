@@ -688,3 +688,5 @@ https://securelist.com/chafer-used-remexi-malware/89538/
 https://threatpost.com/chafer-apt-hits-middle-east-govs-with-latest-cyber-espionage-attacks/156002/
 
 https://www.securityweek.com/us-imposes-sanctions-apt39-iranian-hackers
+
+https://www.zdnet.com/article/us-sanctions-iranian-government-front-company-hiding-major-hacking-operations/#ftag=RSSbaffb68
