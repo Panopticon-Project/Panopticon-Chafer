@@ -690,3 +690,5 @@ https://threatpost.com/chafer-apt-hits-middle-east-govs-with-latest-cyber-espion
 https://www.securityweek.com/us-imposes-sanctions-apt39-iranian-hackers
 
 https://www.zdnet.com/article/us-sanctions-iranian-government-front-company-hiding-major-hacking-operations/#ftag=RSSbaffb68
+
+https://malwaretips.com/threads/rana-android-malware-updates-allow-whatsapp-telegram-im-snooping.105577/
